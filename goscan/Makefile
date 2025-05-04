@@ -12,10 +12,9 @@ init:  ## Init the project.
 
 .PHONY: setup
 setup:  ## Setup for required tools.
-	go get github.com/golang/lint/golint
-	go get golang.org/x/tools/cmd/goimports
-	go get -u github.com/golang/dep/cmd/dep
-	dep ensure
+	go install golang.org/x/lint/golint@latest
+	go install golang.org/x/tools/cmd/goimports@v0.20.0
+	go mod tidy
 
 .PHONY: fmt
 fmt: ## Formatting source codes.
