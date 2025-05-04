@@ -7,6 +7,6 @@ WORKDIR /go/src/github.com/marco-lancini/goscan
 COPY . .
 
 RUN go mod tidy
-RUN go build -o /bin/goscan
+RUN go build -o /bin/goscan ./goscan
 
 ENTRYPOINT ["/bin/goscan"]
