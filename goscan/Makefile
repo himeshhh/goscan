@@ -1,14 +1,13 @@
 NAME := goscan
-VERSION := 2.4
-AUTHOR := Marco Lancini [@LanciniMarco]
+VERSION := 2.5
+AUTHOR := Himesh
 LDFLAGS := -X 'main.version=$(VERSION)' -X 'main.author=$(AUTHOR)'
 
 .DEFAULT_GOAL := help
 
 .PHONY: init
 init:  ## Init the project.
-	go get -u github.com/golang/dep/cmd/dep
-	dep init
+	go mod tidy
 
 .PHONY: setup
 setup:  ## Setup for required tools.
