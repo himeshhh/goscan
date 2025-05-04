@@ -13,4 +13,4 @@ COPY . .
 RUN go mod tidy
 RUN go build -o /bin/goscan
 
-ENTRYPOINT ["/bin/goscan"]
+ENTRYPOINT ["/bin/goscan"]
